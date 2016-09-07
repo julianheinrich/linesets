@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+
+    .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+  }
+
+  	html,body {
+  		width: 100%;
+  		height: 100%;
+  	}
+
+  	.container {
+  		position: relative;
+  		width: 100%;
+  		height: 100%;
+  	}
+
+  	.section {
+	width: 100%;
+	height: 100%;
+}
+
+    </style>
+
+    <title>Basic Example</title>
+
+  </head>
+  <body>
+
+    <div class="container" id="container">
+    	<div class="section" id="example"></div>
+    </div>
+
+    <script src="../../js/d3.min.js"></script>
+    <script src="../../src/lineardiagram.js"></script>
+    <script>
+      var zones = [["A"], ["C"], ["A","B"], ["B","C"]];
+      var ld = d3.linearDiagram()("#example")
+  		.zones(zones)
+  		.render();
+    </script>
+
+  </body>
+</html>
